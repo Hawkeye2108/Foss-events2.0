@@ -1,4 +1,4 @@
-<div align="center"> <img align="center" alt="dschackfest" src="https://i.postimg.cc/j50FZJ90/Hackfest-23.png" height='150' width='350'></div>
+<div align="center"> <img align="center" alt="dschackfest" src="https://i.postimg.cc/j50FZJ90/Hackfest-23.png" height='200' width='350'></div>
 
 
 # Foss-Events
