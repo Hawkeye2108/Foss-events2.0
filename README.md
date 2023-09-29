@@ -3,10 +3,10 @@
 
 # Foss-Events
 
-[![Issues](https://img.shields.io/github/issues/DSC-JSS-NOIDA/foss-events)](https://github.com/DSC-JSS-NOIDA/foss-events/issues)
-[![PRs](https://img.shields.io/github/issues-pr/DSC-JSS-NOIDA/foss-events)](https://github.com/DSC-JSS-NOIDA/foss-events/pulls)
+[![Issues](https://img.shields.io/github/issues/DSC-JSS-NOIDA/foss-events)](https://github.com/DSC-JSS-NOIDA/Foss-events2.0/issues)
+[![PRs](https://img.shields.io/github/issues-pr/DSC-JSS-NOIDA/Foss-events2.0)](https://github.com/DSC-JSS-NOIDA/Foss-events2.0/pulls)
 [![Maintenance](https://img.shields.io/maintenance/yes/2020?color=green&logo=github)](https://github.com/DSC-JSS-NOIDA/)
-[![Forks](https://img.shields.io/github/forks/DSC-JSS-NOIDA/foss-events?style=social)](https://github.com/DSC-JSS-NOIDA/foss-events) [![Stars](https://img.shields.io/github/stars/DSC-JSS-NOIDA/foss-events?style=social)](https://github.com/DSC-JSS-NOIDA/foss-events) [![Watchers](https://img.shields.io/github/watchers/DSC-JSS-NOIDA/foss-events?style=social)](https://github.com/DSC-JSS-NOIDA/foss-events) [![Twitter Follow](https://img.shields.io/twitter/follow/DSCJSSATEN?style=social)](https://twitter.com/DSCJSSATEN) [![Tweet](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2FDSC-JSS-NOIDA%2Ffoss-events)](https://twitter.com/DSCJSSATEN)
+[![Forks](https://img.shields.io/github/forks/DSC-JSS-NOIDA/Foss-events2.0?style=social)](https://github.com/DSC-JSS-NOIDA/foss-events) [![Stars](https://img.shields.io/github/stars/DSC-JSS-NOIDA/foss-events?style=social)](https://github.com/DSC-JSS-NOIDA/Foss-events2.0) [![Watchers](https://img.shields.io/github/watchers/DSC-JSS-NOIDA/Foss-events2.0?style=social)](https://github.com/DSC-JSS-NOIDA/Foss-events2.0) [![Twitter Follow](https://img.shields.io/twitter/follow/DSCJSSATEN?style=social)](https://twitter.com/DSCJSSATEN) [![Tweet](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2FDSC-JSS-NOIDA%2FFoss-events2.0)](https://twitter.com/DSCJSSATEN)
 
 A simple website with a collection of open-source events happening across the globe. This is a beginner-friendly repository that helps you learn git and contribute to web projects.
 
@@ -43,8 +43,8 @@ A simple website with a collection of open-source events happening across the gl
 
 | S.No. | Branch Name | Purpose |
 | --------------- | --------------- | --------------- |
-| 1. | [master](https://github.com/DSC-JSS-NOIDA/foss-events/tree/master) | contains the frontend code  |
-| 2. | [backend](https://github.com/DSC-JSS-NOIDA/foss-events/tree/backend) | contains all backend code |
+| 1. | [master](https://github.com/DSC-JSS-NOIDA/Foss-events2.0/tree/master) | contains the frontend code  |
+| 2. | [backend](https://github.com/DSC-JSS-NOIDA/Foss-events2.0/tree/backend) | contains all backend code |
 
 ## Get Started
 ### Steps for Contributing
@@ -52,7 +52,7 @@ A simple website with a collection of open-source events happening across the gl
 <strong>Frontend</strong>
 - Fork and clone the Repo by typing the following commands in the terminal 
 ```
-$ git clone https://github.com/your-username/foss-events.git
+$ git clone https://github.com/DSC-JSS-NOIDA/Foss-events2.0.git
 $ cd foss-events/Frontend
 ```
 - Open this folder in your favourite IDE.  <br>
@@ -69,25 +69,25 @@ $ cd foss-events/Frontend
 
 - Fork and clone the Repo by typing the following commands in the terminal 
 ```
-$ git clone https://github.com/your-username/foss-events.git
-$ cd foss-events
+$ git clone https://github.com/your-username/Foss-events2.0.git
+$ cd Foss-events2.0
 ```
-![fork](https://i.postimg.cc/cHx44NPx/Screenshot-152.png)
+![fork](https://i.postimg.cc/y8z4WCcV/image.jpg)
 
 
 <hr>
 
-![clone](https://i.postimg.cc/qqcPttKW/Screenshot-154.png)<hr>
+![clone](https://i.postimg.cc/MG7r4nFR/image.jpg)<hr>
 
 
-![clone](https://i.postimg.cc/T31sxNtz/Screenshot-162.png)
+![clone](https://i.postimg.cc/yxp6KnvS/image.png)
 
 - Change Branch using:
 ```
 $ git checkout backend
 $ cd Backend
 ```
-![branch](https://i.postimg.cc/RVsPgQvX/Screenshot-163.png)
+![branch](https://i.postimg.cc/tTwym7Th/image.png)
 
 - Get connection string from [Mongo Atlas](https://www.mongodb.com/cloud/atlas) by creating a cluster or you can also use your locally installed mongodb
 - You can click [here](https://www.youtube.com/watch?v=KKyag6t98g8&t=792s) to learn how to connect atlas to you project
@@ -136,22 +136,22 @@ $ git push
 
 #### Happy?? Star ⭐ this Repo. 🤩
 
-[![ForTheBadge uses-git](http://ForTheBadge.com/images/badges/uses-git.svg)](https://github.com/DSC-JSS-NOIDA/foss-events)
-[![ForTheBadge uses-html](http://ForTheBadge.com/images/badges/uses-html.svg)](https://github.com/DSC-JSS-NOIDA/foss-events)
-[![ForTheBadge uses-css](http://ForTheBadge.com/images/badges/uses-css.svg)](https://github.com/DSC-JSS-NOIDA/foss-events)
-[![ForTheBadge uses-js](http://ForTheBadge.com/images/badges/uses-js.svg)](https://github.com/DSC-JSS-NOIDA/foss-events)
+[![ForTheBadge uses-git](http://ForTheBadge.com/images/badges/uses-git.svg)](https://github.com/DSC-JSS-NOIDA/Foss-events2.0)
+[![ForTheBadge uses-html](http://ForTheBadge.com/images/badges/uses-html.svg)](https://github.com/DSC-JSS-NOIDA/Foss-events2.0)
+[![ForTheBadge uses-css](http://ForTheBadge.com/images/badges/uses-css.svg)](https://github.com/DSC-JSS-NOIDA/Foss-events2.0)
+[![ForTheBadge uses-js](http://ForTheBadge.com/images/badges/uses-js.svg)](https://github.com/DSC-JSS-NOIDA/Foss-events2.0)
 
 > Made By DSC JSS NOIDA with ❤️
 
 
 <br><br>
 
-[![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://github.com/DSC-JSS-NOIDA/foss-events)
-[![ForTheBadge built-by-developers](http://ForTheBadge.com/images/badges/built-by-developers.svg)](https://github.com/DSC-JSS-NOIDA/foss-events)
+[![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://github.com/DSC-JSS-NOIDA/Foss-events2.0)
+[![ForTheBadge built-by-developers](http://ForTheBadge.com/images/badges/built-by-developers.svg)](https://github.com/DSC-JSS-NOIDA/Foss-events2.0)
                                                    
 
 > **_Need help?_** 
-> **_Feel free to contact us @ [dscjssnoida@gmail.com](mailto:idscjssnoida@gmail.com?Subject=DSCHackFest2020)_**
+> **_Feel free to contact us @ [dscjssnoida@gmail.com](mailto:dscjssnoida@gmail.com?Subject=DSCHackFest2023)_**
 
 
 ## Connect with us  
