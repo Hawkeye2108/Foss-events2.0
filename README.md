@@ -15,7 +15,7 @@ A simple website with a collection of open-source events happening across the gl
 ### Links
 - **Frontend**: https://fossevents2.netlify.app/
 - **Backend**: https://foss-events.herokuapp.com
-| [Figma](https://www.figma.com/file/4WhBmxpudX68rae98aETBq/GDSC-DESIGN-SYSTEM?type=design&node-id=4717%3A1283&mode=design&t=EcLRsyKf8JPghXSX-1) | Figma File  |
+- **Figma File**: [Click Here](https://www.figma.com/file/4WhBmxpudX68rae98aETBq/GDSC-DESIGN-SYSTEM?type=design&node-id=4717%3A1283&mode=design&t=EcLRsyKf8JPghXSX-1)
 
 ## Browser Support
 - **Firefox**:	version 4 and up
