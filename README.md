@@ -3,10 +3,10 @@
 
 # Foss-Events
 
-[![Issues](https://img.shields.io/github/issues/DSC-JSS-NOIDA/foss-events)](https://github.com/DSC-JSS-NOIDA/Foss-events2.0/issues)
+[![Issues](https://github.com/DSC-JSS-NOIDA/Foss-events2.0/issues)](https://github.com/DSC-JSS-NOIDA/Foss-events2.0/issues)
 [![PRs](https://img.shields.io/github/issues-pr/DSC-JSS-NOIDA/Foss-events2.0)](https://github.com/DSC-JSS-NOIDA/Foss-events2.0/pulls)
 [![Maintenance](https://img.shields.io/maintenance/yes/2020?color=green&logo=github)](https://github.com/DSC-JSS-NOIDA/)
-[![Forks](https://img.shields.io/github/forks/DSC-JSS-NOIDA/Foss-events2.0?style=social)](https://github.com/DSC-JSS-NOIDA/foss-events) [![Stars](https://img.shields.io/github/stars/DSC-JSS-NOIDA/foss-events?style=social)](https://github.com/DSC-JSS-NOIDA/Foss-events2.0) [![Watchers](https://img.shields.io/github/watchers/DSC-JSS-NOIDA/Foss-events2.0?style=social)](https://github.com/DSC-JSS-NOIDA/Foss-events2.0) [![Twitter Follow](https://img.shields.io/twitter/follow/DSCJSSATEN?style=social)](https://twitter.com/DSCJSSATEN) [![Tweet](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2FDSC-JSS-NOIDA%2FFoss-events2.0)](https://twitter.com/DSCJSSATEN)
+[![Forks](https://img.shields.io/github/forks/DSC-JSS-NOIDA/Foss-events2.0?style=social)](https://github.com/DSC-JSS-NOIDA/foss-events) [![Stars](https://img.shields.io/github/stars/DSC-JSS-NOIDA/foss-events2?style=social)](https://github.com/DSC-JSS-NOIDA/Foss-events2.0) [![Watchers](https://img.shields.io/github/watchers/DSC-JSS-NOIDA/Foss-events2.0?style=social)](https://github.com/DSC-JSS-NOIDA/Foss-events2.0) [![Twitter Follow](https://img.shields.io/twitter/follow/DSCJSSATEN?style=social)](https://twitter.com/DSCJSSATEN) [![Tweet](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2FDSC-JSS-NOIDA%2FFoss-events2.0)](https://twitter.com/DSCJSSATEN)
 
 A simple website with a collection of open-source events happening across the globe. This is a beginner-friendly repository that helps you learn git and contribute to web projects.
 
@@ -15,6 +15,7 @@ A simple website with a collection of open-source events happening across the gl
 ### Links
 - **Frontend**: https://fossevents2.netlify.app/
 - **Backend**: https://foss-events.herokuapp.com
+| [Figma](https://www.figma.com/file/4WhBmxpudX68rae98aETBq/GDSC-DESIGN-SYSTEM?type=design&node-id=4717%3A1283&mode=design&t=EcLRsyKf8JPghXSX-1) | Figma File  |
 
 ## Browser Support
 - **Firefox**:	version 4 and up
