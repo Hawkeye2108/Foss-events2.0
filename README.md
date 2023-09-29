@@ -53,7 +53,7 @@ A simple website with a collection of open-source events happening across the gl
 - Fork and clone the Repo by typing the following commands in the terminal 
 ```
 $ git clone https://github.com/DSC-JSS-NOIDA/Foss-events2.0.git
-$ cd foss-events/Frontend
+$ cd Foss-events2.0/Frontend
 ```
 - Open this folder in your favourite IDE.  <br>
 - Run `npm install`.<br>
