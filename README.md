@@ -1,4 +1,4 @@
-<div align="center"> <img align="center" alt="dschackfest" src="https://user-images.githubusercontent.com/42115530/94295926-a5741880-ff7f-11ea-890b-39ad20ac0f21.png" height='150' width='350'></div>
+<div align="center"> <img align="center" alt="dschackfest" src="" height='150' width='350'></div>
 
 
 # Foss-Events
