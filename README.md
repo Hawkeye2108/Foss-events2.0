@@ -13,7 +13,7 @@ A simple website with a collection of open-source events happening across the gl
 [![](https://sourcerer.io/fame/PragatiVerma18/DSC-JSS-NOIDA/foss-events/images/0)](https://sourcerer.io/fame/PragatiVerma18/DSC-JSS-NOIDA/foss-events/links/0)[![](https://sourcerer.io/fame/PragatiVerma18/DSC-JSS-NOIDA/foss-events/images/1)](https://sourcerer.io/fame/PragatiVerma18/DSC-JSS-NOIDA/foss-events/links/1)[![](https://sourcerer.io/fame/PragatiVerma18/DSC-JSS-NOIDA/foss-events/images/2)](https://sourcerer.io/fame/PragatiVerma18/DSC-JSS-NOIDA/foss-events/links/2)[![](https://sourcerer.io/fame/PragatiVerma18/DSC-JSS-NOIDA/foss-events/images/3)](https://sourcerer.io/fame/PragatiVerma18/DSC-JSS-NOIDA/foss-events/links/3)[![](https://sourcerer.io/fame/PragatiVerma18/DSC-JSS-NOIDA/foss-events/images/4)](https://sourcerer.io/fame/PragatiVerma18/DSC-JSS-NOIDA/foss-events/links/4)[![](https://sourcerer.io/fame/PragatiVerma18/DSC-JSS-NOIDA/foss-events/images/5)](https://sourcerer.io/fame/PragatiVerma18/DSC-JSS-NOIDA/foss-events/links/5)[![](https://sourcerer.io/fame/PragatiVerma18/DSC-JSS-NOIDA/foss-events/images/6)](https://sourcerer.io/fame/PragatiVerma18/DSC-JSS-NOIDA/foss-events/links/6)[![](https://sourcerer.io/fame/PragatiVerma18/DSC-JSS-NOIDA/foss-events/images/7)](https://sourcerer.io/fame/PragatiVerma18/DSC-JSS-NOIDA/foss-events/links/7)
 
 ### Links
-- **Frontend**: https://fossevents.netlify.app/
+- **Frontend**: https://fossevents2.netlify.app/
 - **Backend**: https://foss-events.herokuapp.com
 
 ## Browser Support
