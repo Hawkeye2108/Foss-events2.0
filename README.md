@@ -1,4 +1,4 @@
-<div align="center"> <img align="center" alt="dschackfest" src="https://i.postimg.cc/j50FZJ90/Hackfest-23.png" height='200' width='350'></div>
+ <div align="center"> <img align="center" alt="dschackfest" src="https://i.postimg.cc/j50FZJ90/Hackfest-23.png" height='200' width='350'></div>
 
 
 # Foss-Events
@@ -6,7 +6,7 @@
 [![Issues](https://img.shields.io/github/issues/DSC-JSS-NOIDA/Foss-events2.0)](https://github.com/DSC-JSS-NOIDA/Foss-events2.0/issues)
 [![PRs](https://img.shields.io/github/issues-pr/DSC-JSS-NOIDA/Foss-events2.0)](https://github.com/DSC-JSS-NOIDA/Foss-events2.0/pulls)
 [![Maintenance](https://img.shields.io/maintenance/yes/2023?color=green&logo=github)](https://github.com/DSC-JSS-NOIDA/)
-[![Forks](https://img.shields.io/github/forks/DSC-JSS-NOIDA/Foss-events2.0?style=social)](https://github.com/DSC-JSS-NOIDA/foss-events) [![Stars](https://img.shields.io/github/stars/DSC-JSS-NOIDA/foss-events2?style=social)](https://github.com/DSC-JSS-NOIDA/Foss-events2.0) [![Watchers](https://img.shields.io/github/watchers/DSC-JSS-NOIDA/Foss-events2.0?style=social)](https://github.com/DSC-JSS-NOIDA/Foss-events2.0) [![Twitter Follow](https://img.shields.io/twitter/follow/DSCJSSATEN?style=social)](https://twitter.com/DSCJSSATEN) [![Tweet](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2FDSC-JSS-NOIDA%2FFoss-events2.0)](https://twitter.com/DSCJSSATEN)
+[![Forks](https://img.shields.io/github/forks/DSC-JSS-NOIDA/Foss-events2.0?style=social)](https://github.com/DSC-JSS-NOIDA/Foss-events2.0) [![Stars](https://img.shields.io/github/stars/DSC-JSS-NOIDA/Foss-events2.0?style=social)](https://github.com/DSC-JSS-NOIDA/Foss-events2.0) [![Watchers](https://img.shields.io/github/watchers/DSC-JSS-NOIDA/Foss-events2.0?style=social)](https://github.com/DSC-JSS-NOIDA/Foss-events2.0) [![Twitter Follow](https://img.shields.io/twitter/follow/DSCJSSATEN?style=social)](https://twitter.com/DSCJSSATEN) [![Tweet](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2FDSC-JSS-NOIDA%2FFoss-events2.0)](https://twitter.com/DSCJSSATEN)
 
 A simple website with a collection of open-source events happening across the globe. This is a beginner-friendly repository that helps you learn git and contribute to web projects.
 
@@ -15,7 +15,7 @@ A simple website with a collection of open-source events happening across the gl
 ### Links
 - **Frontend**: https://fossevents2.netlify.app/
 - **Backend**: https://foss-events.herokuapp.com
-- **Figma File**: [Click Here](#)
+- **Figma File**: [Click Here](https://www.figma.com/file/1JSMaoKNjNXYHn2ABc2ra3/Foss-events2.0?type=design&node-id=4717%3A1283&mode=design&t=NYnbA7Q4UQvLjTcU-1)
 
 ## Browser Support
 - **Firefox**:	version 4 and up
@@ -28,14 +28,14 @@ A simple website with a collection of open-source events happening across the gl
 ## Technology Stack used:
 
 <img src="https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white"/> <img src="https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white"/>  <img src="https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/>
-<img src="https://img.shields.io/badge/node.js%20-%2343853D.svg?&style=for-the-badge&logo=node.js&logoColor=white"/>   <img src="https://img.shields.io/badge/github%20-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"/> <img src="https://img.shields.io/badge/heroku%20-%23430098.svg?&style=for-the-badge&logo=heroku&logoColor=white"/> <img src="https://img.shields.io/badge/express.js%20-%23404d59.svg?&style=for-the-badge"/> <img src ="https://img.shields.io/badge/MongoDB-%234ea94b.svg?&style=for-the-badge&logo=mongodb&logoColor=white"/>
+<img src="https://img.shields.io/badge/node.js%20-%2343853D.svg?&style=for-the-badge&logo=node.js&logoColor=white"/>   <img src="https://img.shields.io/badge/github%20-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"/> <img src="https://img.shields.io/badge/render%20-%23430098.svg?&style=for-the-badge&logo=render&logoColor=white"/> <img src="https://img.shields.io/badge/express.js%20-%23404d59.svg?&style=for-the-badge"/> <img src ="https://img.shields.io/badge/MongoDB-%234ea94b.svg?&style=for-the-badge&logo=mongodb&logoColor=white"/>
 
 - **Frontend**: HTML5, CSS3, JavaScript
 - **Backend**: Node.js, Express.js
 - **IDE**: VS Code
 - **Version Control**: Git and GitHub
 - **Database**: MongoDb
-- **Hosting**: Heroku, Netlify
+- **Hosting**: Render, Netlify
 
 ## Slack Channel
 [![chat on slack](https://img.shields.io/badge/chat-on%20slack-brightgreen)](https://join.slack.com/t/dschackfest2020/shared_invite/zt-hvmr02i9-kApLVOuvUHIolKwBbk4Vsg)
