@@ -216,60 +216,6 @@ function filterByStatus(reqStatus, eventList) {
   });
 }
 
-// Filter by Range
-function filterByRange(rangeStart, rangeEnd, eventList) {
-  if(rangeStart == null) {
-    rangeStart = new Date('0001-01-01T00:00:00Z');
-  }
-
-  if(rangeEnd == null) {  
-    rangeEnd = new Date((new Date().getFullYear()) + 100,1,1);
-  }
-
-  // the rangeStart should always be less than rangeEnd
-  if (rangeStart.getTime() >= rangeEnd.getTime()) {
-    alert("The Range Start should be less than Range End");
-    return;
-  }
- 
-  Array.from(eventList).forEach( eventItem => {
-
-    let eventStartDateStr = eventItem.querySelectorAll(".date")[0].innerText.split(':')[1].split('/')
-    let eventEndDateStr = eventItem.querySelectorAll(".date")[1].innerText.split(':')[1].split('/')
-
-    
-    let eventStartDate = new Date(eventStartDateStr[2], eventStartDateStr[1] - 1, eventStartDateStr[0]);
-    let eventEndDate = new Date(eventEndDateStr[2], eventEndDateStr[1] - 1, eventEndDateStr[0]);
-
-    if ( (rangeEnd.getTime() <= eventStartDate.getTime()) || (rangeStart.getTime() >= eventEndDate.getTime())) {
-        eventItem.style.display = 'none';
-    }
-  });
-  
-}
-
-// Filters for Event Ends
-
-const toggleSwitch=document.querySelector('.custom-control-input');
-function switchTheme(event) {
-  if (event.target.checked) {
-    document.documentElement.setAttribute("data-theme", "dark");
-    localStorage.setItem("theme", "dark");
-  } else {
-    document.documentElement.setAttribute("data-theme", "light");
-    localStorage.setItem("theme", "light");
-  }
-}
-toggleSwitch.addEventListener("change", switchTheme);
-const currentTheme = localStorage.getItem("theme");
-if (currentTheme) {
-  document.documentElement.setAttribute("data-theme", currentTheme);
-
-  if (currentTheme === "dark") {
-    toggleSwitch.checked = true;
-  }
-}
-
 //Scroll to top
 const Top = document.querySelector(".to-top");
 
