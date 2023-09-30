@@ -1,7 +1,6 @@
 const router = require('express').Router();
 const mongoose = require('mongoose');
 const user = require('../../models//user');
-const bcrypt = require('bcrypt');
 
 // post request for signup
 //data required in the request body- name, email, password, confirmPassword
@@ -23,9 +22,6 @@ router.post('/', async (req, res) => {
 					message: 'User already exists',
 				});
 			} else {
-				// encypting the pasword
-				let hashed_password = await bcrypt.hash(password, 10);
-				password = hashed_password;
 				const User = new user({
 					name,
 					email,
