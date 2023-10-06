@@ -148,14 +148,16 @@ footer {
   color: #0a5656;
 }
 
-#social-media-icons {
+#social-media-icons{
   margin-top: 20px;
   padding: 0px 50px;
   display: flex;
   justify-content: space-between;
   font-size: 28px;
 }
-
+#social-media-icons a i:hover{
+  color: #275f64;
+}
 .social-media {
   color: var(--primary-title);
   transition: color 0.15s ease-in;
