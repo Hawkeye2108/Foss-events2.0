@@ -95,22 +95,44 @@
       </div>
     </nav>
     <!-- Navbar Ends -->
-    <div class="container" id="aboutUs">
+    <div class="container d-none d-lg-block" id="aboutUs">
       <div class="row" id="box">
         <div class="col-6 md">
-          <h1 id="mainHeading" class="pb-3">Searching for an open source organization? Here we are!</h1>
+          <h1 id="mainHeading" class="pb-3 text-center" >Searching for an open source organization? <br>Here we are!</h1>
           <hr style="border: 1px solid #275F64;">
-          <p id="paraGraph">Greetings! Hope you all are doing good. Want to contribute to open source and don't know
+          <p class="text-center" id="paraGraph">Greetings! Hope you all are doing good. Want to contribute to open source and don't know
             what organization to search? Welcome to our website, we keep track on nearly every open source organization.
             We post every necessary details related to any particular organization you want to contribute in, whether is
             it active or not, their registration details, their page link and so on. It will be super easy for you to
             know about any organization. Hope you like our services. Cheers.</p>
         </div>
         <div class="col-6 md">
-          <img src="Frontend/data/img/About us page-bro 1.svg" />
+          <img class="img-fluid" src="Frontend/data/img/About us page-bro 1.svg" />
         </div>
       </div>
     </div>
+
+    <!-- For Window size < 992 -->
+    <div class="container d-lg-none" id="aboutUs">
+      <div class="row" id="box">
+        <div class="col-12 ">
+          <div class="col-12 text-center">
+            <img class="img-fluid" src="Frontend/data/img/About us page-bro 1.svg" />
+          </div>
+          <h1 id="mainHeading" class="pb-3 text-center" >Searching for an open source organization? <br>Here we are!</h1>
+          <hr style="border: 1px solid #275F64;">
+          <p class="text-center " id="paraGraph">Greetings! Hope you all are doing good. Want to contribute to open source and don't know
+            what organization to search? Welcome to our website, we keep track on nearly every open source organization.
+            We post every necessary details related to any particular organization you want to contribute in, whether is
+            it active or not, their registration details, their page link and so on. It will be super easy for you to
+            know about any organization. Hope you like our services. Cheers.</p>
+        </div>
+    
+      </div>
+    </div>
+
+
+
     <!--Scroll to top starts-->
     <a href="#" class="to-top" style="text-decoration: none; color: white">
       <i class="fa fa-angle-up"></i>
