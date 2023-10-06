@@ -20,11 +20,8 @@ footer {
 }
 
 #contactus {
-  margin-top: 30px;
-  margin-left: 150px;
-  margin-right: 150px;
-  padding: 25px 50px;
-  padding-bottom: 55px;
+  margin: 30px 60px 0px 60px;
+    padding-bottom: 55px;
 }
 
 #contact-head {
@@ -46,11 +43,22 @@ footer {
   text-align: center;
   font-weight: 500;
   font-size: 20px;
-  margin: 0px 80px;
 }
 
 #form-footer {
   margin-top: 30px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1182px) {
+  #form-footer {
+    grid-template-columns: 1fr;
+    align-items: center;
+    padding: 0px 180px;
+  }
 }
 
 .center-div {
@@ -125,6 +133,7 @@ footer {
 
 #social-section {
   padding: 70px 0px;
+
 }
 
 #social-section a:hover {
@@ -150,7 +159,7 @@ footer {
 
 #social-media-icons {
   margin-top: 20px;
-  padding: 0px 50px;
+  padding: 0px 20px;
   display: flex;
   justify-content: space-between;
   font-size: 28px;
