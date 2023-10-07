@@ -141,6 +141,13 @@ $ git push
 
 > Made By DSC JSS NOIDA with ❤️
 
+## Our Contributors  !! ✨
+#### Thanks to these wonderful people: ✨
+
+<a href="https://github.com/DSC-JSS-NOIDA/Foss-events2.0/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=DSC-JSS-NOIDA/Foss-events2.0" />
+</a>
+
 
 <br><br>
 
