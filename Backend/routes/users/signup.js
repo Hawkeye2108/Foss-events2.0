@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const mongoose = require('mongoose');
 const user = require('../../models//user');
+const { hashPassword } = require('../../helpers/hashing');
 
 // post request for signup
 //data required in the request body- name, email, password, confirmPassword
@@ -22,10 +23,11 @@ router.post('/', async (req, res) => {
 					message: 'User already exists',
 				});
 			} else {
+				const hashedPassword = await hashPassword(password);
 				const User = new user({
 					name,
 					email,
-					password,
+					password:hashedPassword,
 				});
 				//saving data in database
 				let info = await User.save();
