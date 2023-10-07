@@ -1,7 +1,7 @@
 const liveServer = require('live-server');
  
 var params = {
-    port: 8080, 
+    port: 8000, 
     host: "0.0.0.0", 
     root: ".", 
     open: false, 
