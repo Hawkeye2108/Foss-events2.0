@@ -6,9 +6,11 @@ const auth = require("./users/auth");
 // GET ROUTES
 
 // get request for displaying all events
-router.get("/", async (req, res) => {
+router.get("/", auth, async (req, res) => {
   try {
-    const data = await events.find({}).select("title date website");
+    const id = req.userid;
+    // const data = await events.find({user:id}).select("title date website");
+    const data = await events.find({user:id});
     console.log(data);
     res.send({
       msg: "data fetched successfully",
@@ -23,10 +25,11 @@ router.get("/", async (req, res) => {
 });
 
 //get request for displaying single event
-router.get("/:title", async (req, res) => {
+router.get("/:title", auth, async (req, res) => {
   try {
+    const id = req.userid;
     const title = req.params.title;
-    const data = await events.findOne({ title });
+    const data = await events.findOne({ title, user: id});
     res.send({
       msg: "data fetched successfully",
       data,
@@ -42,16 +45,18 @@ router.get("/:title", async (req, res) => {
 // POST ROUTES
 
 // post request for adding event
-// data required in the request body- title, date, website, details
+// data required in the request body- title, website, start, end, organisation, location
 router.post("/addroom", auth, async (req, res) => {
   try {
-    const { title, date, website, details } = req.body;
+    const { title, website, start, end, organisation, location } = req.body;
     const newEvent = new events({
-      user: req.userdata,
+      user: req.userid,
       title,
-      date,
       website,
-      details,
+      start,
+      end,
+      organisation,
+      location
     });
     //saving data in db
     const newEventInfo = await newEvent.save();
@@ -63,7 +68,7 @@ router.post("/addroom", auth, async (req, res) => {
   } catch (err) {
     console.log(err);
     res.status(500).send({
-      msg: "something went wrong",
+      msg: "Something went wrong",
     });
   }
 });
@@ -72,42 +77,37 @@ router.post("/addroom", auth, async (req, res) => {
 // All the update routes will be written here
 
 //This route will edit particular event
-router.put('/edit/:title', async (req, res) => {
-  const event = req.params.title;
-  events.findOne({ title: event }, (err, eve) => {
-    if (err) {
-      res.json({ error: true, message: `Error while finding this event`, errMessage: err });
-    } else if (eve) {
+router.put('/edit/:id', auth, async (req, res) => {
+  try {
+  const eventId = req.params.id;
+        const userId = req.userid;
+        let event = await events.findById(eventId);
+        console.log(event);
 
-      const { title, date, website, details } = req.body;
-      eve.title = title != "" ? title : eve.title;
-      eve.date = date != "" ? date : eve.date;
-      eve.website = website != "" ? website : eve.website;
-      eve.details = details != "" ? details : eve.details;
-      eve.save((err, result) => {
-        if (err) {
-          res.json({
-            error: true,
-            message: err
-          });
-        } else if (result) {
-          res.json({
-            error: false,
-            message: "Event updated successfully",
-            title: result.title,
-            date: result.date,
-            website: result.website,
-            details: result.details,
-          });
-        } else {
-          res.json({
-            error: true,
-            message: 'Error updating event'
-          });
+        if (!event) {
+          return res.status(404).send("Not Found");
         }
-      });
-    }
-  })
+        if(userId != event.user.toString()){
+          return res.status(401).send("Not ALlowed");
+        }
+
+      const { title, website, start, end, organisation, location} = req.body;
+      const newEvent = {};
+      if(title) { newEvent.title = title; }
+      if(website) { newEvent.website = website; }
+      if(start) { newEvent.start = start; }
+      if(end) { newEvent.end = end; }
+      if(organisation) { newEvent.organisation = organisation; }
+      if(location) { newEvent.location = location; }
+      event = await events.findByIdAndUpdate( eventId, {$set: newEvent}, {new : true});
+          res.json({message: "Event updated successfully",
+            event});
+         
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({message:"Internal Server", error});
+  }
+
 })
 
 
@@ -116,14 +116,17 @@ router.put('/edit/:title', async (req, res) => {
 
 //This route will delete particular event
 router.delete('/delete/:id', auth, async (req, res) => {
-        const id = req.params.id;
-
-        let event = await events.findOne({ });
-        if (!title) {
+        const eventId = req.params.id;
+        const userId = req.userid;
+        let event = await events.findById(eventId);
+        if (!event) {
           return res.status(404).send("Not Found");
         }
+        if(userId != event.user.toString()){
+          return res.status(401).send("Not ALlowed");
+        }
 
-        event = await events.findByIdAndDelete(event._id);
+        event = await events.findByIdAndDelete(eventId);
         res.json({ message: "Deleted Successfully", event });
 
 }
