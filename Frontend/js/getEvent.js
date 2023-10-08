@@ -28,10 +28,10 @@ fetch("../data/events.json")
       eventTitle.appendChild(heading);
       let startDate = document.createElement("span");
       startDate.className = "date";
-      startDate.innerHTML = `<b>Starts:</b> ${res[data].start}`;
+      startDate.innerHTML = `Starts: ${res[data].start}`;
       let endDate = document.createElement("span");
       endDate.className = "date";
-      endDate.innerHTML = `<b>Ends:</b> ${res[data].end}`;
+      endDate.innerHTML = `Ends: ${res[data].end}`;
       let eventDetails = document.createElement("div");
       eventDetails.className = "event_details";
       let eventLink = document.createElement("a");
