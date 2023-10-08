@@ -1,5 +1,14 @@
+@font-face {
+  font-family: "Queensides";
+  src:
+    url("../data/fonts/Queensides-3z7Ey.woff2") format("woff2"),
+    url("../data/fonts/Queensides-3z7Ey.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
-  background-image: url('../data/img/About\ Us.svg');
+  background-image: url("../data/img/About\ Us.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -61,6 +70,7 @@ body {
   background: #6fb3b8;
   justify-content: center;
   text-align: center;
+  font-family: 'Queensides', sans-serif;
 }
 
 .event_card:hover {
@@ -68,7 +78,7 @@ body {
 }
 
 .event_card::before {
-  content: '';
+  content: "";
   width: 20px;
   height: 20px;
   background-color: #275f64;
@@ -79,9 +89,7 @@ body {
 }
 
 .event_card .btn {
-  position: absolute;
-  bottom: 53px;
-  left: 73px;
+  position: relative;
   border-radius: 13px;
   border: 2px solid #fff;
   background: #275f64;
@@ -93,13 +101,19 @@ body {
   margin-top: 30px;
 }
 
+.event_card .btn h6 {
+  font-weight: bold;
+  all: unset;
+}
+
 .event_card .btn:hover {
   opacity: 0.9;
   transform: scale(1.1);
 }
 
 .date {
-  color: rgb(59, 59, 59);
+  font-weight: bold;
+  margin-top: 20px;
 }
 
 .date:nth-child(2) {
@@ -143,18 +157,24 @@ body {
   transition: all 1.5s ease;
 }
 
-.link {
-  margin-top: 20px;
+.link,
+.link > a > h6 {
+  margin-top: 20px 0px;
+  font-family: var(--secondary-font-family) !important;
+  text-wrap: nowrap;
+  padding: 15px 0px;
 }
 
 .locationOnline {
   color: white;
   font-weight: bold;
+  font-family: var(--secondary-font-family) !important;
 }
 
 .locationOffline {
   color: white;
   font-weight: bold;
+  font-family: var(--secondary-font-family) !important;
 }
 
 .background-cont {
@@ -162,17 +182,15 @@ body {
   background: linear-gradient(180deg, #6fb3b8 -13.33%, #e5e5e5 100%);
   box-shadow: 6px 7px 12px #6fb3b8;
   padding: 2%;
-  margin-left: 44px;
-  margin-right: 40px;
-  /* width: 92%; */
+  margin-left: 80px;
+  width: 92%;
   border-radius: 15px;
+  font-family: var(--secondary-font-family) !important;
 }
 
 .social-icon {
   display: inline-block;
   width: 10px;
-  position: absolute;
-
 }
 
 .contact-inputs {
@@ -239,13 +257,14 @@ body {
   }
 }
 .form-control {
-  width: 92%;
+  width: 500px;
   height: 54px;
   flex-shrink: 0;
   border-radius: 12px;
   background: #f6f6f2;
   box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.25);
   padding-left: 55px;
+  font-family: var(--primary-font-family) !important;
 }
 
 .form-control::placeholder {
@@ -267,8 +286,8 @@ body {
 
 .form-group i {
   position: relative;
-  top: 2px;
-  left: 38px;
+  top: 2.5vw;
+  left: 1vw;
 }
 
 .form-group {
@@ -276,14 +295,9 @@ body {
 }
 
 .search-input {
-  /* margin: auto; */
-  align-items: center;
+  margin: auto;
+  align-self: center;
   display: flex;
-  width: 100%;
-}
-.search-icon {
-  display: flex;
-  align-items: center;
 }
 
 .form-control2 {

@@ -37,9 +37,6 @@ A simple website with a collection of open-source events happening across the gl
 - **Database**: MongoDb
 - **Hosting**: Render, Netlify
 
-## Slack Channel
-[![chat on slack](https://img.shields.io/badge/chat-on%20slack-brightgreen)](https://join.slack.com/t/dschackfest2020/shared_invite/zt-hvmr02i9-kApLVOuvUHIolKwBbk4Vsg)
-
 ### GitHub Repository Structure
 
 | S.No. | Branch Name | Purpose |

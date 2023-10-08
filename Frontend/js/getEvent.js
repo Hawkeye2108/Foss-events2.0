@@ -4,10 +4,23 @@ fetch("../data/events.json")
   .then((res) => {
     let cardContainer = document.getElementsByClassName("card-container")[0];
     for (let data in res) {
+
+      // For Adding logo In the Center Of Card 
+      let Logodiv = document.createElement("div");
+      let logo = document.createElement('img');
+      logo.className = "img-fluid mb-3";
+      logo.src = `../data/EventLogo/${res[data].img}`;
+      Logodiv.appendChild(logo);
+      Logodiv.style.maxWidth = "100px";
+      Logodiv.style.maxHeight = "100px";
+
+      
+
       let emptyDiv = document.createElement("div");
       emptyDiv.className = "empty_div";
       let eventCard = document.createElement("div");
       eventCard.className = "event_card";
+      eventCard.appendChild(Logodiv);
       let eventTitle = document.createElement("div");
       let heading = document.createElement("h3");
       heading.innerText = res[data].title;
@@ -15,10 +28,10 @@ fetch("../data/events.json")
       eventTitle.appendChild(heading);
       let startDate = document.createElement("span");
       startDate.className = "date";
-      startDate.innerHTML = `<b>Starts:</b> ${res[data].start}`;
+      startDate.innerHTML = `Starts: ${res[data].start}`;
       let endDate = document.createElement("span");
       endDate.className = "date";
-      endDate.innerHTML = `<b>Ends:</b> ${res[data].end}`;
+      endDate.innerHTML = `Ends: ${res[data].end}`;
       let eventDetails = document.createElement("div");
       eventDetails.className = "event_details";
       let eventLink = document.createElement("a");
@@ -58,7 +71,7 @@ fetch("../data/events.json")
     }
   });
 
-  
+
 // Filters for Events
 
 // Search Filter Element
@@ -73,30 +86,30 @@ let eventStatusFilterElement = document.querySelector('#event-status-filter');
 eventStatusFilterElement.addEventListener('change', applyFilter);
 
 // Event Range Start Element
-let eventRangeStartElement= document.getElementById("range-start");
+let eventRangeStartElement = document.getElementById("range-start");
 eventRangeStartElement.addEventListener('change', applyFilter);
 
 let eventRangeEndElement = document.getElementById("range-end");
 eventRangeEndElement.addEventListener('change', applyFilter);
 
 // Filter Event Function
-function applyFilter(){
-  
+function applyFilter() {
+
   // To remove all class of no_result
   let cardContainer = document.getElementsByClassName("card-container")[0];
   let elements = cardContainer.getElementsByClassName('no_result');
   while (elements[0])
-      elements[0].parentNode.removeChild(elements[0])
+    elements[0].parentNode.removeChild(elements[0])
   // ends
 
   let eventList = document.querySelectorAll('.empty_div');
-  let eventCount=eventList.length;
-  Array.from(eventList).forEach( eventItem => {
+  let eventCount = eventList.length;
+  Array.from(eventList).forEach(eventItem => {
     eventItem.style.display = 'block';
   });
 
   let searchTerm = search.value.toLowerCase();
-  filterBySearchTerm(searchTerm, eventList,1);
+  filterBySearchTerm(searchTerm, eventList, 1);
 
   let reqStatus = eventStatusFilterElement.value.toLowerCase();
   filterByStatus(reqStatus, eventList);
@@ -105,89 +118,89 @@ function applyFilter(){
   let rangeEnd = eventRangeEndElement.valueAsDate;
   console.log(rangeStart, rangeEnd)
   filterByRange(rangeStart, rangeEnd, eventList)
-  
+
   //Display no result message
-  Array.from(eventList).forEach( eventItem => {
-    if (eventItem.style.display == 'none'){
-     eventCount--;
+  Array.from(eventList).forEach(eventItem => {
+    if (eventItem.style.display == 'none') {
+      eventCount--;
     }
-  }); 
-  if(eventCount==0){
+  });
+  if (eventCount == 0) {
     let cardContainer = document.getElementsByClassName("card-container")[0];
     let noResult = document.createElement("div");
     noResult.className = "no_result";
     let heading = document.createElement("h3");
     heading.innerText = "Sorry 😞 ! No Event found 🔍";
     noResult.appendChild(heading);
-    cardContainer.appendChild(noResult); 
-    }
+    cardContainer.appendChild(noResult);
+  }
   //Display message ends
 }
 
 // Filter by Search Term
-function filterBySearchTerm(searchTerm, eventList,check) {
-  if(check == 1){
+function filterBySearchTerm(searchTerm, eventList, check) {
+  if (check == 1) {
     let userData = searchTerm; //user enetered data
-  let suggestions=[];
-  Array.from(eventList).forEach( eventItem => {
-    let eventTitle = eventItem.querySelector('.event_title').innerText.toLowerCase();
-    console.log(eventTitle);
-    suggestions.push(eventTitle);
-  });
+    let suggestions = [];
+    Array.from(eventList).forEach(eventItem => {
+      let eventTitle = eventItem.querySelector('.event_title').innerText.toLowerCase();
+      console.log(eventTitle);
+      suggestions.push(eventTitle);
+    });
 
     let emptyArray = [];
-    if(userData){
-        icon.onclick = ()=>{
+    if (userData) {
+      icon.onclick = () => {
 
-        }
-        emptyArray = suggestions.filter((data)=>{
-            //filtering array value and user characters to lowercase and return only those words which are start with user enetered chars
-            return data.toLocaleLowerCase().startsWith(userData.toLocaleLowerCase()); 
-        });
-        emptyArray = emptyArray.map((data)=>{
-            // passing return data inside li tag
-            return data = '<li>'+ data +'</li>';
-        });
-        searchWrapper.classList.add("active"); //show autocomplete box
-        showSuggestions(emptyArray);
-        let allList = suggBox.querySelectorAll("li");
-        for (let i = 0; i < allList.length; i++) {
-            //adding onclick attribute in all li tag
-            allList[i].setAttribute("onclick", "select(this)");
-        }
-    }else{
-        searchWrapper.classList.remove("active"); //hide autocomplete box
+      }
+      emptyArray = suggestions.filter((data) => {
+        //filtering array value and user characters to lowercase and return only those words which are start with user enetered chars
+        return data.toLocaleLowerCase().startsWith(userData.toLocaleLowerCase());
+      });
+      emptyArray = emptyArray.map((data) => {
+        // passing return data inside li tag
+        return data = '<li>' + data + '</li>';
+      });
+      searchWrapper.classList.add("active"); //show autocomplete box
+      showSuggestions(emptyArray);
+      let allList = suggBox.querySelectorAll("li");
+      for (let i = 0; i < allList.length; i++) {
+        //adding onclick attribute in all li tag
+        allList[i].setAttribute("onclick", "select(this)");
+      }
+    } else {
+      searchWrapper.classList.remove("active"); //hide autocomplete box
     }
   }
-  
-  Array.from(eventList).forEach( eventItem => {
+
+  Array.from(eventList).forEach(eventItem => {
 
     let eventTitle = eventItem.querySelector('.event_title').innerText.toLowerCase()
 
-    if (eventTitle.indexOf(searchTerm) == -1){
+    if (eventTitle.indexOf(searchTerm) == -1) {
       eventItem.style.display = 'none';
     }
   });
 }
-function select(element){
+function select(element) {
   let selectData = element.textContent;
   search.value = selectData.toUpperCase();
-  icon.onclick = ()=>{
-      
+  icon.onclick = () => {
+
   }
   searchWrapper.classList.remove("active");
   let eventList = document.querySelectorAll('.empty_div');
   let searchTerm = search.value.toLowerCase();
-  filterBySearchTerm(searchTerm, eventList,0);
+  filterBySearchTerm(searchTerm, eventList, 0);
 }
 
-function showSuggestions(list){
+function showSuggestions(list) {
   let listData;
-  if(!list.length){
-      userValue = search.value;
-      listData = '<li>'+ userValue +'</li>';
-  }else{
-      listData = list.join('');
+  if (!list.length) {
+    userValue = search.value;
+    listData = '<li>' + userValue + '</li>';
+  } else {
+    listData = list.join('');
   }
   suggBox.innerHTML = listData;
 }
@@ -195,19 +208,19 @@ function showSuggestions(list){
 // Filter by Status
 function filterByStatus(reqStatus, eventList) {
   let notReqClass = '';
-  if( reqStatus == 'online') {
+  if (reqStatus == 'online') {
     notReqClass = '.locationOffline'
   }
-  else if(reqStatus == 'offline') {
+  else if (reqStatus == 'offline') {
     notReqClass = '.locationOnline'
   }
   else {
     return;
   }
 
-  Array.from(eventList).forEach( eventItem => {
+  Array.from(eventList).forEach(eventItem => {
 
-    let currentEventStatus = eventItem.querySelector(notReqClass)  
+    let currentEventStatus = eventItem.querySelector(notReqClass)
 
     if (currentEventStatus) {
       eventItem.style.display = 'none';
@@ -236,14 +249,14 @@ window.addEventListener("DOMContentLoaded", function () {
   // var button = document.getElementById("my-form-button");
   var status = document.getElementById("status");
   // Success and Error functions for after the form is submitted
-  
+
   function success() {
     status.classList.remove("error");
     status.classList.remove("success");
-    form.value='';
-    name.value='';
-    email.value='';
-    message.value='';
+    form.value = '';
+    name.value = '';
+    email.value = '';
+    message.value = '';
     status.classList.add("success");
     status.innerHTML = "Thanks!Your message is submitted successfully";
   }

@@ -5,7 +5,8 @@
     "start": "19/10/2023",
     "end": "20/10/2023",
     "organisation": "Open Source India",
-    "location": "Offline"
+    "location": "Offline",
+    "img":"OpenSourceIndai.png"
   },
   {
     "title": "FOSDEM 2024",
@@ -13,7 +14,8 @@
     "start": "03/02/2024",
     "end": "04/02/2024",
     "organisation": "FOSDEM dev community at University Brussels (ULB)",
-    "location": "Online"
+    "location": "Online",
+    "img":"Fosdem.jpg"
   },
   {
     "title": "FOSSCOMM",
@@ -21,7 +23,8 @@
     "start": "21/10/2023",
     "end": "22/10/2023",
     "organisation": "University of Crete",
-    "location": "Offline"
+    "location": "Offline",
+    "img":"Fosscomm.png"
   },
   {
     "title": "DevFest India",
@@ -29,7 +32,8 @@
     "start": "1/09/2023",
     "end": "30/10/2021",
     "organisation": "Google",
-    "location": "Offline"
+    "location": "Offline",
+    "img":"gdsc.png"
   },
   {
     "title": "All Things Open",
@@ -37,7 +41,8 @@
     "start": "15/10/2023",
     "end": "17/10/2023",
     "organisation": "All Things Open",
-    "location": "Offline"
+    "location": "Offline",
+          "img":"Ato.png"
   },
   {
     "title": "GIRLSCRIPT SUMMER OF CODE",
@@ -45,7 +50,8 @@
     "start": "14/05/2023",
     "end": "10/08/2023",
     "organisation": "GirlScript Foundation",
-    "location": "Online"
+    "location": "Online",
+          "img":"Girlscript.png"
   },
   {
     "title": "Google Summer of Code",
@@ -53,7 +59,8 @@
     "start": "23/01/2023",
     "end": "13/11/2023",
     "organisation": "Multiple organisations like FOSSASIA,Redhat,ASF and many more ",
-    "location": "Online"
+    "location": "Online",
+          "img":"Gsoc.png"
   },
   {
     "title": "MLH Fellowship",
@@ -61,7 +68,8 @@
     "start": "18/09/2023",
     "end": "29/01/2024",
     "organisation": "Github, Facebook, Dev and many more ",
-    "location": "Online"
+    "location": "Online",
+          "img":"mlh.png"
   },
   {
     "title": "OUTREACHY",
@@ -69,7 +77,8 @@
     "start": "07/12/2023",
     "end": "07/03/2024",
     "organisation": "The Software Freedom Conservancy",
-    "location": "Remote"
+    "location": "Remote",
+          "img":"outrechy.png"
   },
   {
     "title": "24 Pull Requests",
@@ -77,7 +86,8 @@
     "start": "01/12/2023",
     "end": "24/12/2023",
     "organisation": "24 Pull Requests Community",
-    "location": "Online"
+    "location": "Online",
+          "img":"24pull.png"
   },
   {
     "title": "MOZILLA FESTIVAL",
@@ -85,7 +95,8 @@
     "start": "20/03/2023",
     "end": "24/03/2023",
     "organisation": "Mozilla",
-    "location": "Online"
+    "location": "Online",
+          "img":"mozilla.png"
   },
   {
     "title": "PROCESSING FOUNDATION FELLOWSHIP PROGRAM",
@@ -93,7 +104,8 @@
     "start": "01/06/2023",
     "end": "31/08/2023",
     "organisation": "Processing Foundation",
-    "location": "Online"
+    "location": "Online",
+          "img":"processfoundation.jpg"
   },
   {
     "title": "GOOGLE SEASON OF DOCS",
@@ -101,7 +113,8 @@
     "start": "18/01/2023",
     "end": "8/11/2024",
     "organisation": "Multiple organisations like Apache Airflow,Arduino,CERN-HSF",
-    "location": "Online"
+    "location": "Online",
+          "img":"googlesessionogdocs.png"
   },
   {
     "title": "Digital Ocean Hacktoberfest",
@@ -109,7 +122,8 @@
     "start": "01/10/2023",
     "end": "31/10/2023",
     "organisation": "DigitalOcean, intel, Github, Dev and many more ",
-    "location": "Online"
+    "location": "Online",
+          "img":"hacktoberfest.png"
   },
   {
     "title": "Season of KDE",
@@ -117,7 +131,8 @@
     "start": "15/12/2022",
     "end": "20/05/2023",
     "organisation": "KDE Community",
-    "location": "Online"
+    "location": "Online",
+          "img":"kde1.png"
   },
   {
     "title": "DevOps India Summit 2023",
@@ -125,7 +140,8 @@
     "start": "17/1/2023",
     "end": "18/1/2023",
     "organisation": "Xellentro",
-    "location": "Offline"
+    "location": "Offline",
+          "img":"devopsindaisummit.png"
   },
   {
     "title": "Google Summer of Earth Engine",
@@ -133,7 +149,8 @@
     "start": "15/03/2023",
     "end": "15/08/2023",
     "organisation": "Google",
-    "location": "Online"
+    "location": "Online",
+          "img":"GoogleearthEngine.jpg"
   },
   {
     "title": "GUADEC",
@@ -141,7 +158,8 @@
     "start": "26/07/2023",
     "end": "31/07/2023",
     "organisation": "The GNOME Foundation",
-    "location": "Online"
+    "location": "Online",
+          "img":"Guadec.png"
   },
   {
     "title": "SOCIS – The ESA Summer of Code in Space",
@@ -149,7 +167,8 @@
     "start": "01/06/2023",
     "end": "30/09/2023",
     "organisation": "European Space Agency",
-    "location": "Online"
+    "location": "Online",
+          "img":"esa.jpg"
   },
   {
     "title": "KWOC",
@@ -157,7 +176,8 @@
     "start": "25/10/2021",
     "end": "9/01/2023",
     "organisation": "KOSS,IIT Kharagpur",
-    "location": "Online"
+    "location": "Online",
+          "img":"Kwoc.jpg"
   },
   {
     "title": "Hyperledger Mentorship Program",
@@ -165,7 +185,8 @@
     "start": "01/02/2023",
     "end": "30/10/2023",
     "organisation": "The Linux Foundation",
-    "location": "Online"
+    "location": "Online",
+          "img":"hyerladger.jpg"
   },
   {
     "title": "Delta Winter of Code",
@@ -173,7 +194,8 @@
     "start": "23/10/2023",
     "end": "29/02/2024",
     "organisation": "Delta Force, NIT Trichy",
-    "location": "Online"
+    "location": "Online",
+          "img":"delta.png"
   },
   {
     "title": "NextJS Conf",
@@ -181,6 +203,9 @@
     "start": "26/10/2023",
     "end": "26/10/2023",
     "organisation": "Vercel",
-    "location": "Online"
+      "location": "Online",
+      "img":"nextjs.png"
+
+ 
   }
 ]
