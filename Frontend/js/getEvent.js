@@ -139,7 +139,6 @@ function filterBySearchTerm(searchTerm, eventList,check) {
     if(userData){
         icon.onclick = ()=>{
 
-        }
         emptyArray = suggestions.filter((data)=>{
             //filtering array value and user characters to lowercase and return only those words which are start with user enetered chars
             return data.toLocaleLowerCase().startsWith(userData.toLocaleLowerCase()); 
@@ -155,6 +154,7 @@ function filterBySearchTerm(searchTerm, eventList,check) {
             //adding onclick attribute in all li tag
             allList[i].setAttribute("onclick", "select(this)");
         }
+      }
     }else{
         searchWrapper.classList.remove("active"); //hide autocomplete box
     }
