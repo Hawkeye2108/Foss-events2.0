@@ -1,53 +1,50 @@
 // Fetch data from events.json file
-fetch("../data/events.json")
+fetch('http://localhost:8080/events')
   .then((res) => res.json())
   .then((res) => {
-    let cardContainer = document.getElementsByClassName("card-container")[0];
+    let cardContainer = document.getElementsByClassName('card-container')[0];
     for (let data in res) {
-
-      // For Adding logo In the Center Of Card 
-      let Logodiv = document.createElement("div");
+      // For Adding logo In the Center Of Card
+      let Logodiv = document.createElement('div');
       let logo = document.createElement('img');
-      logo.className = "img-fluid mb-3";
+      logo.className = 'img-fluid mb-3';
       logo.src = `../data/EventLogo/${res[data].img}`;
       Logodiv.appendChild(logo);
-      Logodiv.style.maxWidth = "100px";
-      Logodiv.style.maxHeight = "100px";
+      Logodiv.style.maxWidth = '100px';
+      Logodiv.style.maxHeight = '100px';
 
-      
-
-      let emptyDiv = document.createElement("div");
-      emptyDiv.className = "empty_div";
-      let eventCard = document.createElement("div");
-      eventCard.className = "event_card";
+      let emptyDiv = document.createElement('div');
+      emptyDiv.className = 'empty_div';
+      let eventCard = document.createElement('div');
+      eventCard.className = 'event_card';
       eventCard.appendChild(Logodiv);
-      let eventTitle = document.createElement("div");
-      let heading = document.createElement("h3");
+      let eventTitle = document.createElement('div');
+      let heading = document.createElement('h3');
       heading.innerText = res[data].title;
-      heading.className = "event_title";
+      heading.className = 'event_title';
       eventTitle.appendChild(heading);
-      let startDate = document.createElement("span");
-      startDate.className = "date";
+      let startDate = document.createElement('span');
+      startDate.className = 'date';
       startDate.innerHTML = `Starts: ${res[data].start}`;
-      let endDate = document.createElement("span");
-      endDate.className = "date";
+      let endDate = document.createElement('span');
+      endDate.className = 'date';
       endDate.innerHTML = `Ends: ${res[data].end}`;
-      let eventDetails = document.createElement("div");
-      eventDetails.className = "event_details";
-      let eventLink = document.createElement("a");
+      let eventDetails = document.createElement('div');
+      eventDetails.className = 'event_details';
+      let eventLink = document.createElement('a');
       Object.assign(eventLink, {
         href: `https://${res[data].website}`,
-        target: "_blank",
-        rel: "noopener noreferrer",
-        className: "btn btn-primary link btn-more",
+        target: '_blank',
+        rel: 'noopener noreferrer',
+        className: 'btn btn-primary link btn-more',
       });
-      let link = document.createElement("h6");
-      link.innerText = "More Info";
+      let link = document.createElement('h6');
+      link.innerText = 'More Info';
       eventLink.appendChild(link);
-      let organisation = document.createElement("p");
-      organisation.className = "event_organisation";
+      let organisation = document.createElement('p');
+      organisation.className = 'event_organisation';
       organisation.innerHTML = `<b>Organisation: ${res[data].organisation}`;
-      let loc = document.createElement("h5");
+      let loc = document.createElement('h5');
       let eventStatus = res[data].location;
       setEventStatus();
       loc.innerText = eventStatus;
@@ -58,27 +55,26 @@ fetch("../data/events.json")
 
       //function to set the status of event
       function setEventStatus() {
-        let endDate = res[data].end.split("/", 3);
+        let endDate = res[data].end.split('/', 3);
         endDate = `${endDate[1]}/${endDate[0]}/${endDate[2]}`;
         endDate = new Date(endDate);
         if (new Date() > endDate) {
-          eventStatus = "Offline";
-          loc.className = "locationOffline";
+          eventStatus = 'Offline';
+          loc.className = 'locationOffline';
         } else {
-          loc.className = "locationOnline";
+          loc.className = 'locationOnline';
         }
       }
     }
   });
 
-
 // Filters for Events
 
 // Search Filter Element
-const searchWrapper = document.querySelector(".search-input");
-const search = searchWrapper.querySelector("input");
-const suggBox = searchWrapper.querySelector(".autocom-box");
-const icon = searchWrapper.querySelector("i");
+const searchWrapper = document.querySelector('.search-input');
+const search = searchWrapper.querySelector('input');
+const suggBox = searchWrapper.querySelector('.autocom-box');
+const icon = searchWrapper.querySelector('i');
 search.addEventListener('keyup', applyFilter);
 
 // Event Status Filter Element
@@ -86,25 +82,23 @@ let eventStatusFilterElement = document.querySelector('#event-status-filter');
 eventStatusFilterElement.addEventListener('change', applyFilter);
 
 // Event Range Start Element
-let eventRangeStartElement = document.getElementById("range-start");
+let eventRangeStartElement = document.getElementById('range-start');
 eventRangeStartElement.addEventListener('change', applyFilter);
 
-let eventRangeEndElement = document.getElementById("range-end");
+let eventRangeEndElement = document.getElementById('range-end');
 eventRangeEndElement.addEventListener('change', applyFilter);
 
 // Filter Event Function
 function applyFilter() {
-
   // To remove all class of no_result
-  let cardContainer = document.getElementsByClassName("card-container")[0];
+  let cardContainer = document.getElementsByClassName('card-container')[0];
   let elements = cardContainer.getElementsByClassName('no_result');
-  while (elements[0])
-    elements[0].parentNode.removeChild(elements[0])
+  while (elements[0]) elements[0].parentNode.removeChild(elements[0]);
   // ends
 
   let eventList = document.querySelectorAll('.empty_div');
   let eventCount = eventList.length;
-  Array.from(eventList).forEach(eventItem => {
+  Array.from(eventList).forEach((eventItem) => {
     eventItem.style.display = 'block';
   });
 
@@ -116,21 +110,21 @@ function applyFilter() {
 
   let rangeStart = eventRangeStartElement.valueAsDate;
   let rangeEnd = eventRangeEndElement.valueAsDate;
-  console.log(rangeStart, rangeEnd)
-  filterByRange(rangeStart, rangeEnd, eventList)
+  console.log(rangeStart, rangeEnd);
+  filterByRange(rangeStart, rangeEnd, eventList);
 
   //Display no result message
-  Array.from(eventList).forEach(eventItem => {
+  Array.from(eventList).forEach((eventItem) => {
     if (eventItem.style.display == 'none') {
       eventCount--;
     }
   });
   if (eventCount == 0) {
-    let cardContainer = document.getElementsByClassName("card-container")[0];
-    let noResult = document.createElement("div");
-    noResult.className = "no_result";
-    let heading = document.createElement("h3");
-    heading.innerText = "Sorry 😞 ! No Event found 🔍";
+    let cardContainer = document.getElementsByClassName('card-container')[0];
+    let noResult = document.createElement('div');
+    noResult.className = 'no_result';
+    let heading = document.createElement('h3');
+    heading.innerText = 'Sorry 😞 ! No Event found 🔍';
     noResult.appendChild(heading);
     cardContainer.appendChild(noResult);
   }
@@ -142,40 +136,43 @@ function filterBySearchTerm(searchTerm, eventList, check) {
   if (check == 1) {
     let userData = searchTerm; //user enetered data
     let suggestions = [];
-    Array.from(eventList).forEach(eventItem => {
-      let eventTitle = eventItem.querySelector('.event_title').innerText.toLowerCase();
+    Array.from(eventList).forEach((eventItem) => {
+      let eventTitle = eventItem
+        .querySelector('.event_title')
+        .innerText.toLowerCase();
       console.log(eventTitle);
       suggestions.push(eventTitle);
     });
 
     let emptyArray = [];
     if (userData) {
-      icon.onclick = () => {
-
-      }
+      icon.onclick = () => {};
       emptyArray = suggestions.filter((data) => {
         //filtering array value and user characters to lowercase and return only those words which are start with user enetered chars
-        return data.toLocaleLowerCase().startsWith(userData.toLocaleLowerCase());
+        return data
+          .toLocaleLowerCase()
+          .startsWith(userData.toLocaleLowerCase());
       });
       emptyArray = emptyArray.map((data) => {
         // passing return data inside li tag
-        return data = '<li>' + data + '</li>';
+        return (data = '<li>' + data + '</li>');
       });
-      searchWrapper.classList.add("active"); //show autocomplete box
+      searchWrapper.classList.add('active'); //show autocomplete box
       showSuggestions(emptyArray);
-      let allList = suggBox.querySelectorAll("li");
+      let allList = suggBox.querySelectorAll('li');
       for (let i = 0; i < allList.length; i++) {
         //adding onclick attribute in all li tag
-        allList[i].setAttribute("onclick", "select(this)");
+        allList[i].setAttribute('onclick', 'select(this)');
       }
     } else {
-      searchWrapper.classList.remove("active"); //hide autocomplete box
+      searchWrapper.classList.remove('active'); //hide autocomplete box
     }
   }
 
-  Array.from(eventList).forEach(eventItem => {
-
-    let eventTitle = eventItem.querySelector('.event_title').innerText.toLowerCase()
+  Array.from(eventList).forEach((eventItem) => {
+    let eventTitle = eventItem
+      .querySelector('.event_title')
+      .innerText.toLowerCase();
 
     if (eventTitle.indexOf(searchTerm) == -1) {
       eventItem.style.display = 'none';
@@ -185,10 +182,8 @@ function filterBySearchTerm(searchTerm, eventList, check) {
 function select(element) {
   let selectData = element.textContent;
   search.value = selectData.toUpperCase();
-  icon.onclick = () => {
-
-  }
-  searchWrapper.classList.remove("active");
+  icon.onclick = () => {};
+  searchWrapper.classList.remove('active');
   let eventList = document.querySelectorAll('.empty_div');
   let searchTerm = search.value.toLowerCase();
   filterBySearchTerm(searchTerm, eventList, 0);
@@ -209,68 +204,64 @@ function showSuggestions(list) {
 function filterByStatus(reqStatus, eventList) {
   let notReqClass = '';
   if (reqStatus == 'online') {
-    notReqClass = '.locationOffline'
-  }
-  else if (reqStatus == 'offline') {
-    notReqClass = '.locationOnline'
-  }
-  else {
+    notReqClass = '.locationOffline';
+  } else if (reqStatus == 'offline') {
+    notReqClass = '.locationOnline';
+  } else {
     return;
   }
 
-  Array.from(eventList).forEach(eventItem => {
-
-    let currentEventStatus = eventItem.querySelector(notReqClass)
+  Array.from(eventList).forEach((eventItem) => {
+    let currentEventStatus = eventItem.querySelector(notReqClass);
 
     if (currentEventStatus) {
       eventItem.style.display = 'none';
     }
-
   });
 }
 
 //Scroll to top
-const Top = document.querySelector(".to-top");
+const Top = document.querySelector('.to-top');
 
-window.addEventListener("scroll", () => {
+window.addEventListener('scroll', () => {
   if (window.pageYOffset > 200) {
-    Top.classList.add("active");
+    Top.classList.add('active');
   } else {
-    Top.classList.remove("active");
+    Top.classList.remove('active');
   }
 });
 
-window.addEventListener("DOMContentLoaded", function () {
+window.addEventListener('DOMContentLoaded', function () {
   // get the form elements defined in your form HTML above
-  var form = document.getElementById("my-form");
-  var name = document.getElementById("validationCustom01");
-  var email = document.getElementById("validationCustom02");
-  var message = document.getElementById("validationCustom03");
+  var form = document.getElementById('my-form');
+  var name = document.getElementById('validationCustom01');
+  var email = document.getElementById('validationCustom02');
+  var message = document.getElementById('validationCustom03');
   // var button = document.getElementById("my-form-button");
-  var status = document.getElementById("status");
+  var status = document.getElementById('status');
   // Success and Error functions for after the form is submitted
 
   function success() {
-    status.classList.remove("error");
-    status.classList.remove("success");
+    status.classList.remove('error');
+    status.classList.remove('success');
     form.value = '';
     name.value = '';
     email.value = '';
     message.value = '';
-    status.classList.add("success");
-    status.innerHTML = "Thanks!Your message is submitted successfully";
+    status.classList.add('success');
+    status.innerHTML = 'Thanks!Your message is submitted successfully';
   }
 
   function error() {
-    status.classList.remove("error");
-    status.classList.remove("success");
-    status.classList.add("error");
-    status.innerHTML = "Oops! There was a problem.";
+    status.classList.remove('error');
+    status.classList.remove('success');
+    status.classList.add('error');
+    status.innerHTML = 'Oops! There was a problem.';
   }
 
   // handle the form submission event
 
-  form.addEventListener("submit", function (ev) {
+  form.addEventListener('submit', function (ev) {
     ev.preventDefault();
     var data = new FormData(form);
     ajax(form.method, form.action, data, success, error);
@@ -282,7 +273,7 @@ window.addEventListener("DOMContentLoaded", function () {
 function ajax(method, url, data, success, error) {
   var xhr = new XMLHttpRequest();
   xhr.open(method, url);
-  xhr.setRequestHeader("Accept", "application/json");
+  xhr.setRequestHeader('Accept', 'application/json');
   xhr.onreadystatechange = function () {
     if (xhr.readyState !== XMLHttpRequest.DONE) return;
     if (xhr.status === 200) {
