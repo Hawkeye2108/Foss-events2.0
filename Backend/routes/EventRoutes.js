@@ -1,7 +1,6 @@
 const router = require("express").Router();
 const mongoose = require("mongoose");
 const events = require('../models/events');
-const event = require("../models/events");
 const auth = require("./users/auth");
 
 // GET ROUTES
@@ -9,7 +8,7 @@ const auth = require("./users/auth");
 // get request for displaying all events
 router.get("/", async (req, res) => {
   try {
-    const data = await event.find({}).select("title date website");
+    const data = await events.find({}).select("title date website");
     console.log(data);
     res.send({
       msg: "data fetched successfully",
@@ -27,7 +26,7 @@ router.get("/", async (req, res) => {
 router.get("/:title", async (req, res) => {
   try {
     const title = req.params.title;
-    const data = await event.findOne({ title });
+    const data = await events.findOne({ title });
     res.send({
       msg: "data fetched successfully",
       data,
@@ -47,7 +46,8 @@ router.get("/:title", async (req, res) => {
 router.post("/addroom", auth, async (req, res) => {
   try {
     const { title, date, website, details } = req.body;
-    const newEvent = new event({
+    const newEvent = new events({
+      user: req.userdata,
       title,
       date,
       website,
@@ -109,5 +109,25 @@ router.put('/edit/:title', async (req, res) => {
     }
   })
 })
+
+
+// DELETE ROUTES
+// All the delete routes will be written here
+
+//This route will delete particular event
+router.delete('/delete/:id', auth, async (req, res) => {
+        const id = req.params.id;
+
+        let event = await events.findOne({ });
+        if (!title) {
+          return res.status(404).send("Not Found");
+        }
+
+        event = await events.findByIdAndDelete(event._id);
+        res.json({ message: "Deleted Successfully", event });
+
+}
+);
+
 
 module.exports = router;
