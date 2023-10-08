@@ -1,5 +1,5 @@
 body {
-  background-image: url("../data/img/About\ Us.svg");
+  background-image: url('../data/img/About\ Us.svg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -20,10 +20,7 @@ footer {
 }
 
 #contactus {
-  margin-top: 30px;
-  margin-left: 150px;
-  margin-right: 150px;
-  padding: 25px 50px;
+  margin: 30px 60px 0px 60px;
   padding-bottom: 55px;
 }
 
@@ -46,11 +43,36 @@ footer {
   text-align: center;
   font-weight: 500;
   font-size: 20px;
-  margin: 0px 80px;
 }
 
 #form-footer {
   margin-top: 30px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 600px) {
+  .contact-table {
+    width: 300px;
+  }
+  .btn.btn-md {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  #contactus {
+    margin-left: 45px;
+  }
+  #form-footer{
+    padding: 0 !important;
+  }
+}
+@media (max-width: 1000px) {
+  #form-footer {
+    grid-template-columns: 1fr;
+    align-items: center;
+    padding: 0px 180px;
+  }
 }
 
 .center-div {
@@ -62,7 +84,7 @@ footer {
 .contact-table {
   padding: 10px 25px;
   padding-bottom: 30px;
-  min-width: 450px;
+  /* min-width: 450px; */
   max-width: 500px;
   background-color: rgba(186, 210, 215, 0.5);
 
@@ -77,15 +99,17 @@ footer {
 
 .background-cont {
   background: rgb(246, 231, 231);
-  background: linear-gradient(-20deg,
-      #6fcc6f,
-      #80c580,
-      #83c783,
-      #8fce8f,
-      #c8dc9c,
-      #65b97a,
-      #5cb85c,
-      #54a154);
+  background: linear-gradient(
+    -20deg,
+    #6fcc6f,
+    #80c580,
+    #83c783,
+    #8fce8f,
+    #c8dc9c,
+    #65b97a,
+    #5cb85c,
+    #54a154
+  );
   box-shadow: 6px 7px 12px rgb(123, 146, 123);
   padding: 2%;
   margin-left: 80px;
@@ -148,14 +172,16 @@ footer {
   color: #0a5656;
 }
 
-#social-media-icons {
+#social-media-icons{
   margin-top: 20px;
-  padding: 0px 50px;
+  padding: 0px 20px;
   display: flex;
   justify-content: space-between;
   font-size: 28px;
 }
-
+#social-media-icons a i:hover{
+  color: #275f64;
+}
 .social-media {
   color: var(--primary-title);
   transition: color 0.15s ease-in;
