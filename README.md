@@ -144,9 +144,15 @@ $ git push
 ## Our Contributors  !! ✨
 #### Thanks to these wonderful people: ✨
 
-<a href="https://github.com/DSC-JSS-NOIDA/Foss-events2.0/graphs/contributors">
+<table>
+	<tr>
+		<td>
+			<a href="https://github.com/DSC-JSS-NOIDA/Foss-events2.0/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=DSC-JSS-NOIDA/Foss-events2.0" />
 </a>
+		</td>
+	</tr>
+</table>
 
 
 <br><br>
