@@ -68,6 +68,24 @@ router.post("/addroom", auth, async (req, res) => {
   }
 });
 
+//Adding an api to extract the data from the form
+
+app.post('/submit-form',(req , res) => {
+
+  try {
+    const {name , email , message} = req.body;
+  } catch (error) {
+    res.status(500).send({
+      msg: "something went wrong"
+    })
+  }
+ 
+});
+
+
+
+
+
 // UPDATE ROUTES
 // All the update routes will be written here
 
