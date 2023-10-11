@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
-    "server": "json-server --watch Frontend/data/events.json --port 8080"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
