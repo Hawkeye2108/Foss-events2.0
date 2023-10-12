@@ -64,7 +64,8 @@ fetch("../data/events.json")
         if (new Date() > endDate) {
           eventStatus = "Offline";
           loc.className = "locationOffline";
-        } else {
+        } else if (new Date() < endDate) {
+          eventStatus = "Online";
           loc.className = "locationOnline";
         }
       }
@@ -197,7 +198,7 @@ function select(element) {
 function showSuggestions(list) {
   let listData;
   if (!list.length) {
-    userValue = search.value;
+    let userValue = search.value;
     listData = '<li>' + userValue + '</li>';
   } else {
     listData = list.join('');
@@ -226,6 +227,30 @@ function filterByStatus(reqStatus, eventList) {
       eventItem.style.display = 'none';
     }
 
+  });
+}
+
+// Filter by Range
+function filterByRange(rangeStart, rangeEnd, eventList) {
+  Array.from(eventList).forEach(eventItem => {
+    let startDate = eventItem.querySelector('.date').innerText.split(" ", 2);
+    startDate = `${startDate[1]}/${startDate[0]}/${startDate[2]}`;
+    startDate = new Date(startDate);
+    if (rangeStart && rangeEnd) {
+      if (startDate < rangeStart || startDate > rangeEnd) {
+        eventItem.style.display = 'none';
+      }
+    }
+    else if (rangeStart) {
+      if (startDate < rangeStart) {
+        eventItem.style.display = 'none';
+      }
+    }
+    else if (rangeEnd) {
+      if (startDate > rangeEnd) {
+        eventItem.style.display = 'none';
+      }
+    }
   });
 }
 
