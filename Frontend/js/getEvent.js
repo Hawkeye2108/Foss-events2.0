@@ -14,7 +14,7 @@ fetch("../data/events.json")
       Logodiv.style.maxWidth = "100px";
       Logodiv.style.maxHeight = "100px";
 
-      
+
 
       let emptyDiv = document.createElement("div");
       emptyDiv.className = "empty_div";
@@ -145,7 +145,7 @@ function filterBySearchTerm(searchTerm, eventList, check) {
     let suggestions = [];
     Array.from(eventList).forEach(eventItem => {
       let eventTitle = eventItem.querySelector('.event_title').innerText.toLowerCase();
-      console.log(eventTitle);
+      // console.log(eventTitle);
       suggestions.push(eventTitle);
     });
 
@@ -233,23 +233,20 @@ function filterByStatus(reqStatus, eventList) {
 // Filter by Range
 function filterByRange(rangeStart, rangeEnd, eventList) {
   Array.from(eventList).forEach(eventItem => {
-    let startDate = eventItem.querySelector('.date').innerText.split(" ", 2);
+
+    let startDate = eventItem.querySelector('.date').innerText.split(":", 2)[1];
+    let endDate = eventItem.querySelector('.date').innerText.split(":", 2)[1];
+
+    startDate = startDate.split("/", 3);
     startDate = `${startDate[1]}/${startDate[0]}/${startDate[2]}`;
     startDate = new Date(startDate);
-    if (rangeStart && rangeEnd) {
-      if (startDate < rangeStart || startDate > rangeEnd) {
-        eventItem.style.display = 'none';
-      }
-    }
-    else if (rangeStart) {
-      if (startDate < rangeStart) {
-        eventItem.style.display = 'none';
-      }
-    }
-    else if (rangeEnd) {
-      if (startDate > rangeEnd) {
-        eventItem.style.display = 'none';
-      }
+
+    endDate = endDate.split("/", 3);
+    endDate = `${endDate[1]}/${endDate[0]}/${endDate[2]}`;
+    endDate = new Date(endDate);
+
+    if (rangeStart > startDate || rangeEnd < endDate) {
+      eventItem.style.display = 'none';
     }
   });
 }
