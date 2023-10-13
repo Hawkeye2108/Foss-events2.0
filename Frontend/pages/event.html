@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html lang="en" data-theme="light">
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="Content-Type" content="text/html" />
@@ -176,67 +177,34 @@
             </div>
             <!-- Card-Container Ends -->
         </div>
-        <button
-          class="navbar-toggler"
-          data-toggle="collapse"
-          data-target="#list"
-          aria-label="Toggle Navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="list">
-          <ul class="navbar-nav">
-            <li class="navbar-item">
-              <a href="/#" class="nav-link">About Us</a>
-            </li>
-            <li class="navbar-item">
-              <a href="/Frontend/pages/event.html" class="nav-link">Events</a>
-            </li>
-            <li class="navbar-item">
-              <a href="/Frontend/pages/contactus.html" class="nav-link"
-                >Contact Us</a
-              >
-            </li>
-            <li class="navbar-item">
-              <a href="/feedback.html" class="nav-link">Feedback</a>
-            </li>
-          </ul>
-        </div>
-
-      <!--Scroll to top starts-->
-      <a href="#" class="to-top" style="text-decoration: none; color: white">
-        <i class="fa fa-angle-up"></i>
-      </a>
-      <!--Scroll to top ends-->
-
-      <script src="/Frontend/js/getEvent.js"></script>
-      <!--Particle js background-->
-      <script src="/Frontend/js/particle.js"></script>
-      <script src="/Frontend/js/app.js"></script>
-      <script src="/Frontend/js/jquery-3.2.1.min.js"></script>
-      <!-- JS, Popper.js, and jQuery -->
-      <script
-        src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"
-      ></script>
-      <script
-        src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"
-      ></script>
-      <script
-        src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-        crossorigin="anonymous"
-      ></script>
-      <!--Preloader Script-->
-      <script>
-        $(window).on('load', function () {
-          $('.forloader').addClass('complete');
-        });
-      </script>
+        <!--Scroll to top starts-->
+        <a href="#" class="to-top" style="text-decoration: none; color: white">
+            <i class="fa fa-angle-up"></i>
+        </a>
+        <!--Scroll to top ends-->
+        <script src="/Frontend/js/theme.js"></script>
+        <script src="/Frontend/js/getEvent.js"></script>
+        <!--Particle js background-->
+        <script src="/Frontend/js/particle.js"></script>
+        <script src="/Frontend/js/app.js"></script>
+        <script src="/Frontend/js/jquery-3.2.1.min.js"></script>
+        <!-- JS, Popper.js, and jQuery -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+            crossorigin="anonymous"></script>
+        <!--Preloader Script-->
+        <script>
+            $(window).on("load", function () {
+                $(".forloader").addClass("complete");
+            });
+        </script>
     </div>
-  </body>
+</body>
+
 </html>
