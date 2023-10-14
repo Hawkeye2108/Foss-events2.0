@@ -32,7 +32,7 @@
   --primary-search-dropdown: #282c35;
   --primary-font-family: "Queensides";
   --secondary-font-family: "Poppins";
-  --primary-background-conct: rgba(246, 231, 231,0);
+  --primary-background-conct: rgba(246, 231, 231, 0);
   --background-picture: url("../data/img/aboutusdark.svg");
 }
 
@@ -76,12 +76,14 @@ html {
 
 .social-icons {
   position: fixed;
-  top: 13%;
-  left: 0%;
+  top: 0;
+  bottom: 0;
+  left: 0;
   width: 85px;
-  margin-top: 98px;
+  margin-top: 80px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   z-index: 11;
 }
 
@@ -177,9 +179,7 @@ html {
   outline: none;
 }
 
-.custom-switch
-  .custom-control-input:not(:checked)
-  ~ .custom-control-label::after {
+.custom-switch .custom-control-input:not(:checked) ~ .custom-control-label::after {
   content: "☀";
   transform: rotate(180deg);
   background-color: #f0f6fc;
