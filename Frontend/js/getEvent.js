@@ -245,7 +245,7 @@ function filterByRange(rangeStart, rangeEnd, eventList) {
     endDate = `${endDate[1]}/${endDate[0]}/${endDate[2]}`;
     endDate = new Date(endDate);
 
-    if (rangeStart > startDate || rangeEnd < endDate) {
+    if (!(startDate.getDate() >= rangeStart.getDate() && startDate.getDate() < rangeEnd.getDate() && endDate.getDate() >= rangeStart.getDate() && endDate.getDate() <= rangeEnd.getDate())) {
       eventItem.style.display = 'none';
     }
   });
