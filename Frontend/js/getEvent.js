@@ -14,7 +14,7 @@ fetch("../data/events.json")
       Logodiv.style.maxWidth = "100px";
       Logodiv.style.maxHeight = "100px";
 
-      
+
 
       let emptyDiv = document.createElement("div");
       emptyDiv.className = "empty_div";
