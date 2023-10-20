@@ -127,10 +127,19 @@ html {
 .navbar-collapse {
   justify-content: center;
   padding-right: 10%;
+  @media screen and (max-width: 767px) {
+    padding: 10px 0;
+    background-color: #275f64;
+    position: absolute;
+    z-index: 11;
+    width: 100%;
+    left: 0px;
+    top: 65px;
+  }
 }
 
 .navbar-item {
-  padding: 0 15px;
+  padding: 0 12px;
 }
 
 .navbar-light .navbar-brand,
@@ -138,6 +147,17 @@ html {
   color: white;
   text-decoration: none;
   font-size: 22px;
+  padding: 8px;
+  @media screen and (max-width: 960px) and (min-width: 768px) {
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .navbar-brand {
+    margin: 0;
+  }
 }
 
 .navbar-light .navbar-brand:hover,
