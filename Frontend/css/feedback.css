@@ -1,13 +1,31 @@
 .btn-submit{
     /* color: #6FB3B8; */
-    color: rgba(39, 95, 100, 0.7);
-  border: 2px solid rgba(39, 95, 100, 0.7);
+    color: var(--feedback-btn-color);
+  border: 2px solid var(--feedback-btn-color);
 }
 .btn-submit:hover{
-    background-color: rgba(39, 95, 100, 0.7);
+    background-color:  var(--feedback-btn-color);
     color: white;
     border: none;
 }
-label,h5{
+legend,label,h5{
   color: var(--primary-title);
 }
+#feedback {
+  background-image: var(--background-picture); 
+  background-repeat: no-repeat;
+  background-size:cover;
+  /* Background color for the form container */
+  /*background-color:var(--background-color);*/
+  
+  padding: 20px;
+  border-radius: 10px; /* Add rounded corners */
+}
+.fas
+{
+  color: goldenrod;
+}
+
+/* .btn{
+  background-color: var(--feedback-btn-color) !important;
+} */

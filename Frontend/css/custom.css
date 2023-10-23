@@ -16,6 +16,7 @@
   --secondary-font-family: "Poppins";
   --primary-background-conct: rgba(246, 231, 231);
   --background-picture: url("../data/img/About\ Us.svg");
+  --feedback-btn-color: #275f64;
 }
 
 [data-theme="dark"] {
@@ -34,6 +35,7 @@
   --secondary-font-family: "Poppins";
   --primary-background-conct: rgba(246, 231, 231,0);
   --background-picture: url("../data/img/aboutusdark.svg");
+  --feedback-btn-color: #5f9ca0;
 }
 
 /* custom scroll bar */
