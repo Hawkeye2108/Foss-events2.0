@@ -7,11 +7,10 @@ const auth = require("./users/auth");
 // GET ROUTES
 
 // get request for displaying all events
-router.get("/", async (req, res) => {
+router.get("/", auth, async (req, res) => {
   try {
-    const data = await event
-      .find({})
-      .select("title website start end organisation location");
+    const id = req.userid;
+    const data = await events.find({user: id});
     console.log(data);
     res.send({
       msg: "data fetched successfully",
@@ -26,10 +25,11 @@ router.get("/", async (req, res) => {
 });
 
 //get request for displaying single event
-router.get("/:title", async (req, res) => {
+router.get("/:title", auth, async (req, res) => {
   try {
+    const id = req.userid;
     const title = req.params.title;
-    const data = await event.findOne({ title });
+    const data = await event.findOne({ title, user: id });
     res.send({
       msg: "data fetched successfully",
       data,
@@ -50,6 +50,7 @@ router.post("/addroom", auth, async (req, res) => {
   try {
     const { title, website, start, end, organisation, location } = req.body;
     const newEvent = new event({
+      user: req.userid,
       title,
       website,
       start,
@@ -74,7 +75,7 @@ router.post("/addroom", auth, async (req, res) => {
 
 //Adding an api to extract the data from the form
 
-app.post('/submit-form',(req , res) => {
+router.post('/submit-form',(req , res) => {
 
   try {
     const {name , email , message} = req.body;
