@@ -17,7 +17,7 @@ module.exports = async (req, res, next) => {
     }
     let user = await jwt.verify(token, "123");
     console.log(user);
-    req.userdata = user;
+    req.userid= user.user;
     next();
   } catch (err) {
     res.status(500).send({
