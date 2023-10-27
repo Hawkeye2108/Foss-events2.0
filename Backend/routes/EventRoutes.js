@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const events = require("../models/events");
 const event = require("../models/events");
 const auth = require("./users/auth");
+const form = require("../models/form");
 
 // GET ROUTES
 
@@ -74,10 +75,19 @@ router.post("/addroom", auth, async (req, res) => {
 
 //Adding an api to extract the data from the form
 
-app.post('/submit-form',(req , res) => {
+router.post('/submit-form',async (req , res) => {
 
   try {
     const {name , email , message} = req.body;
+    const Form = new form({
+      name, email, message
+    });
+    //Saving data in Database
+    const data = await Form.save();
+    res.send({
+      message: "Form sent successfully",
+      data
+    });
   } catch (error) {
     res.status(500).send({
       msg: "something went wrong"
